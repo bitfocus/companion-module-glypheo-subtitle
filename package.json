@@ -1,0 +1,15 @@
+{
+  "name": "glypheo-subtitle",
+  "version": "1.0.0",
+  "description": "Controls Glypheo Subtitle over OSC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "glypheo",
+    "subtitle"
+  ],
+  "author": "David Stevens <teamjtf4@gmail.com>",
+  "license": "MIT"
+}
