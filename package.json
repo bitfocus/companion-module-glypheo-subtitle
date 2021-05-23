@@ -1,15 +1,19 @@
 {
-  "name": "glypheo-subtitle",
-  "version": "1.0.0",
-  "description": "Controls Glypheo Subtitle over OSC",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "glypheo",
-    "subtitle"
-  ],
-  "author": "David Stevens <teamjtf4@gmail.com>",
-  "license": "MIT"
+	"name": "glypheo-subtitle",
+	"version": "1.0.0",
+	"api_version": "1.0.0",
+	"keywords": [
+		"Glypheo",
+		"Subtitle"
+	],
+	"manufacturer": "Glypheo",
+	"product": "Subtitle",
+	"shortname": "glypheo",
+	"description": "Controls Glypheo Subtitle using OSC",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "David Stevens <teamjtf4@gmail.com>",
+	"license": "MIT"
 }

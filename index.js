@@ -10,14 +10,7 @@ function instance(system, id, config) {
 
 	self.actions(); // export actions
 
-	// Example: When this script was committed, a fix needed to be made
-	// this will only be run if you had an instance of an older "version" before.
-	// "version" is calculated out from how many upgradescripts your intance config has run.
-	// So just add a addUpgradeScript when you commit a breaking change to the config, that fixes
-	// the config.
-
 	self.addUpgradeScript(function () {
-		// just an example
 		if (self.config.host !== undefined) {
 			self.config.old_host = self.config.host;
 		}
@@ -84,7 +77,7 @@ instance.prototype.actions = function(system) {
 			options: []
 		},
 		'goto': {
-			label: 'Go to specified Subtitl ',
+			label: 'Go to Specified Subtitle',
 			options: [
 				{
 					 type: 'textinput',
@@ -119,7 +112,7 @@ instance.prototype.action = function(action) {
 			args = [];
 			break;
 		case 'goto':
-			oscPath = '/goTo '
+			oscPath = '/goTo'
 			args = [{
 				type: 'f',
 				value: parseFloat(action.options.float)
@@ -130,10 +123,10 @@ instance.prototype.action = function(action) {
 	}
 
 	if (args !== null) {
-		debug('Sending OSC',self.config.host, self.config.port, action.options.path);
+		debug('Sending OSC',self.config.host, self.config.port, oscPath);
 		console.log('sending osc');
 		console.log(args);
-		self.system.emit('osc_send', self.config.host, self.config.port, action.options.path, args);
+		self.system.emit('osc_send', self.config.host, self.config.port, oscPath, args);
 	}
 
 
